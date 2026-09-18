@@ -1,0 +1,24 @@
+{
+  "name": "MyBookshelf",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/bisaro01/MyBookshelf#readme",
+  "bugs": {
+    "url": "https://github.com/bisaro01/MyBookshelf/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bisaro01/MyBookshelf.git"
+  },
+  "license": "ISC",
+  "author": "Lovisa Olsson",
+  "type": "commonjs",
+  "main": "src/main.js",
+  "scripts": {
+    "start": "electron . --disable-gpu",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "electron": "^44.4.2"
+  }
+}
