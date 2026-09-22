@@ -13,7 +13,7 @@
   "license": "ISC",
   "author": "Lovisa Olsson",
   "type": "commonjs",
-  "main": "src/main.js",
+  "main": "main.js",
   "scripts": {
     "start": "electron . --disable-gpu",
     "test": "echo \"Error: no test specified\" && exit 1"
