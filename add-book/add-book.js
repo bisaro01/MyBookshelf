@@ -1,15 +1,13 @@
 
-console.log("add-book.js loaded!");
-
 const backButton = document.getElementById("back-button");
+const form = document.getElementById("book-form");
+const message = document.getElementById("message");
 
 backButton.addEventListener("click", () => {
 
     window.location.href = "../index.html";
 
 });
-
-const form = document.getElementById("book-form");
 
 form.addEventListener("submit", async (event) => {
 
@@ -25,5 +23,14 @@ form.addEventListener("submit", async (event) => {
 
     console.log("Book saved:", savedBook);
 
+    try {
+        await window.electronAPI.addBook(book);
+
+        message.textContent = "Book saved successfully!";
+    } catch (error) {
+        message.textContent = "Could not save the book.";
+    }
+
 });
+
 
