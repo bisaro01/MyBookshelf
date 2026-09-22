@@ -19,18 +19,17 @@ form.addEventListener("submit", async (event) => {
         status: document.getElementById("status").value
     };
 
-    const savedBook = await window.electronAPI.addBook(book);
-
-    console.log("Book saved:", savedBook);
-
     try {
-        await window.electronAPI.addBook(book);
+        const savedBook = await window.electronAPI.addBook(book);
+
+        console.log("Book saved:", savedBook);
 
         message.textContent = "Book saved successfully!";
+
     } catch (error) {
+
         message.textContent = "Could not save the book.";
+
     }
 
 });
-
-
